@@ -1,11 +1,7 @@
-// for nucleo_f411re
+import button from './button';
 
-let state = 1;
-const led = DigitalOut(LED1);
+const led = DigitalOut(LED1, 1);
 
-setInterval(() => {
-  state = state ? 0 : 1;
-  led.write(state);
-}, 500);
-
-print('main.js has finished executing.');
+button.on('rise', () => {
+  led.write(led.read() ? 0 : 1);
+});

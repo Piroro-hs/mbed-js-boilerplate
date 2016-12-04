@@ -3,8 +3,7 @@
   "description": "A boilerplate for JavaScript on mbed",
   "version": "0.1.0",
   "author": "Piroro-hs",
-  "dependencies": {
-  },
+  "dependencies": {},
   "devDependencies": {
     "adm-zip": "^0.4.7",
     "chokidar": "^1.6.1",
