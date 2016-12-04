@@ -1,0 +1,37 @@
+{
+  "name": "mbed-js",
+  "description": "A boilerplate for JavaScript on mbed",
+  "version": "0.1.0",
+  "author": "Piroro-hs",
+  "dependencies": {
+  },
+  "devDependencies": {
+    "adm-zip": "^0.4.7",
+    "chokidar": "^1.6.1",
+    "download-git-repo": "^0.2.1",
+    "es6-promisify": "^5.0.0",
+    "fs-extra": "^1.0.0",
+    "ftp-get": "^0.3.1",
+    "hasbin": "^1.2.3",
+    "manage-path": "^2.0.0",
+    "minimist": "^1.2.0",
+    "nugget": "^2.0.1",
+    "rollup": "^0.36.4",
+    "rollup-plugin-buble": "^0.14.0",
+    "rollup-plugin-commonjs": "^5.0.5",
+    "rollup-plugin-node-resolve": "^2.0.0",
+    "rollup-plugin-uglify": "^1.0.1"
+  },
+  "license": "MIT",
+  "main": "src/main.js",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Piroro-hs/mbed-js-boilerplate.git"
+  },
+  "scripts": {
+    "build": "node scripts/spawn build",
+    "postinstall": "npm run update",
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "update": "node scripts/spawn update"
+  }
+}
