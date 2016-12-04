@@ -1,5 +1,5 @@
 const {spawn, execSync} = require('child_process');
-const {basename} = require('path');
+const {basename, join} = require('path');
 
 const chokidar = require('chokidar');
 const promisify = require('es6-promisify');
@@ -68,7 +68,7 @@ function build() {
       `${jsmbedPath}/BUILD/${target.toLowerCase()}/GCC_ARM/mbedos5.bin`,
       `${jsmbedPath}/BUILD/${target.toLowerCase()}/GCC_ARM/mbedos5.hex`,
     ]))
-    .then(path => copy(path, `${outDir}/${basename(path)}`))
+    .then(path => copy(path, join(outDir, basename(path))))
     .catch((e) => {
       console.log(e);
     });
